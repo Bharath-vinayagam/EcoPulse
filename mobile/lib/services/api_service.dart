@@ -32,14 +32,14 @@ class ApiService {
   }
 
   Future<http.Response> _postWithFallback(String endpoint, {Map<String, String>? headers, Object? body}) async {
-    List<String> urls = [_activeBaseUrl, ..._candidateUrls.where((u) => u != _activeBaseUrl)];
+    List<String> urls = ['http://127.0.0.1:8000', 'http://172.20.129.223:8000', 'http://192.168.137.1:8000'];
     for (final base in urls) {
       try {
         final response = await http.post(
           Uri.parse('$base$endpoint'),
           headers: headers,
           body: body,
-        ).timeout(const Duration(seconds: 3));
+        ).timeout(const Duration(milliseconds: 1500));
         _activeBaseUrl = base;
         return response;
       } catch (e) {
@@ -50,12 +50,12 @@ class ApiService {
   }
 
   Future<http.Response> _getWithFallback(String endpoint) async {
-    List<String> urls = [_activeBaseUrl, ..._candidateUrls.where((u) => u != _activeBaseUrl)];
+    List<String> urls = ['http://127.0.0.1:8000', 'http://172.20.129.223:8000', 'http://192.168.137.1:8000'];
     for (final base in urls) {
       try {
         final response = await http.get(
           Uri.parse('$base$endpoint'),
-        ).timeout(const Duration(seconds: 3));
+        ).timeout(const Duration(milliseconds: 1500));
         _activeBaseUrl = base;
         return response;
       } catch (e) {
