@@ -1,0 +1,19 @@
+{
+  "category_factors": {
+    "Food": 1.7,
+    "Transport": 0.21,
+    "Fuel": 2.3,
+    "Shopping": 0.7,
+    "Utilities": 0.8,
+    "Entertainment": 0.4,
+    "Other": 0.5
+  },
+  "hints": {
+    "Food": ["restaurant", "cafe", "burger", "pizza", "grocer", "supermarket"],
+    "Transport": ["uber", "ola", "taxi", "bus", "train", "flight", "air", "travel"],
+    "Fuel": ["petrol", "diesel", "fuel", "gas", "hp", "indianoil", "bharat"],
+    "Shopping": ["amazon", "flipkart", "mall", "clothes", "electronics"],
+    "Utilities": ["electricity", "water", "internet", "broadband", "wifi"],
+    "Entertainment": ["movie", "cinema", "netflix", "spotify", "game"]
+  }
+}

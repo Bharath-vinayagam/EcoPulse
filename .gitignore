@@ -1,0 +1,50 @@
+# ==========================================
+# Root .gitignore - Smart Expense CO2 Tracker
+# ==========================================
+
+# Environment variables & secrets
+.env
+*.env
+*.env.local
+
+# Database files & local caches
+*.db
+*.sqlite
+*.sqlite3
+data.db
+smart_expense.db
+
+# Python & Virtual Environment
+__pycache__/
+*.py[cod]
+*$py.class
+venv/
+env/
+ENV/
+.pytest_cache/
+
+# Flutter & Dart artifacts
+.dart_tool/
+.flutter-plugins
+.flutter-plugins-dependencies
+.pub-cache/
+.pub/
+mobile/build/
+mobile/.dart_tool/
+mobile/.flutter-plugins*
+build/
+
+# IDEs & System files
+.vscode/
+.idea/
+*.iml
+*.ipr
+*.iws
+.DS_Store
+Thumbs.db
+*.log
+
+# Temporary build scripts & personal interview guides
+write_flutter_files.py
+create_icon.py
+INTERVIEW_PREPARATION_GUIDE.txt

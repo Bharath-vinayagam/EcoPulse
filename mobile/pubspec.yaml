@@ -1,0 +1,42 @@
+name: smart_expense_co2
+description: EcoPulse ⚡ Green Fintech & Carbon Intelligence Tracker
+publish_to: 'none'
+version: 0.1.0+1
+
+environment:
+  sdk: ">=3.3.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+  
+  http: ^1.2.2
+  image_picker: ^1.1.1
+  path_provider: ^2.1.4
+  intl: ^0.19.0
+  google_mlkit_text_recognition: ^0.13.0
+  shared_preferences: ^2.3.2
+  fl_chart: ^0.68.0
+  percent_indicator: ^4.2.3
+  confetti: ^0.7.0
+  animate_do: ^3.3.4
+  shimmer: ^3.0.0
+  badges: ^3.1.2
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^6.0.0
+  flutter_launcher_icons: ^0.13.1
+
+flutter_launcher_icons:
+  android: true
+  ios: false
+  image_path: "assets/ecopulse_logo.jpg"
+  adaptive_icon_background: "#0F172A"
+  adaptive_icon_foreground: "assets/ecopulse_logo.jpg"
+  
+flutter:
+  uses-material-design: true
+  assets:
+    - assets/
