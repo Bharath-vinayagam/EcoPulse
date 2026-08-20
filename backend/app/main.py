@@ -13,8 +13,11 @@ from . import models, schemas
 from .auth import router as auth_router
 from .classifier import classify_and_estimate
 
-# Create tables
-Base.metadata.create_all(bind=engine)
+# Create tables safely
+try:
+    Base.metadata.create_all(bind=engine)
+except Exception as e:
+    print(f"Database table creation warning: {e}")
 
 app = FastAPI(title="EcoPulse Green Carbon Tracker Pro", version="2.0.0")
 
