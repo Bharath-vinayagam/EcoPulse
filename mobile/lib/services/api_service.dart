@@ -40,7 +40,7 @@ class ApiService {
           Uri.parse('$base$endpoint'),
           headers: headers,
           body: body,
-        ).timeout(const Duration(milliseconds: 4000));
+        ).timeout(const Duration(milliseconds: 8000));
         _activeBaseUrl = base;
         return response;
       } catch (e) {
@@ -56,7 +56,7 @@ class ApiService {
       try {
         final response = await http.get(
           Uri.parse('$base$endpoint'),
-        ).timeout(const Duration(milliseconds: 4000));
+        ).timeout(const Duration(milliseconds: 8000));
         _activeBaseUrl = base;
         return response;
       } catch (e) {
