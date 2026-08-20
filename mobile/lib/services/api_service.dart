@@ -4,6 +4,7 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 class ApiService {
   static const List<String> _candidateUrls = [
+    'https://eco-pulse-eta.vercel.app',
     'http://127.0.0.1:8000',
     'http://172.20.129.223:8000',
     'http://192.168.137.1:8000',
