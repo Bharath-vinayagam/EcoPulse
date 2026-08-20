@@ -1,9 +1,4 @@
 # 🌿 EcoPulse — AI-Powered Green Fintech & Carbon Intelligence Platform
-
-<p align="center">
-  <img src="assets/ecopulse_logo.jpg" alt="EcoPulse CO2 Logo" width="220" style="border-radius: 24px;" />
-</p>
-
 > **EcoPulse** is an AI-powered Carbon Footprint & Financial Management Platform that enables users to track daily expenses, compute real-time carbon emissions, scan paper receipts using live OCR, compare transport commute options, set reduction targets, and plant virtual trees in a digital eco-forest.
 
 The platform leverages **Google ML Kit OCR** for on-device receipt scanning, **FastAPI** for high-performance carbon classification, and **Supabase Cloud PostgreSQL** for real-time cloud data synchronization and multi-user authentication.
