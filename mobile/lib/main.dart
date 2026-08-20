@@ -5,7 +5,7 @@ import 'package:smart_expense_co2/screens/main_navigation.dart';
 import 'package:smart_expense_co2/screens/login_screen.dart';
 import 'package:smart_expense_co2/utils/app_theme.dart';
 
-final ValueNotifier<ThemeMode> themeNotifier = ValueNotifier(ThemeMode.light);
+final ValueNotifier<ThemeMode> themeNotifier = ValueNotifier(ThemeMode.dark);
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
@@ -13,7 +13,7 @@ void main() async {
   await apiService.init();
 
   final prefs = await SharedPreferences.getInstance();
-  final isDark = prefs.getBool('dark_mode') ?? false;
+  final isDark = prefs.getBool('dark_mode') ?? true;
   themeNotifier.value = isDark ? ThemeMode.dark : ThemeMode.light;
 
   runApp(const MyApp());
