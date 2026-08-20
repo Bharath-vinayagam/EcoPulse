@@ -2,25 +2,15 @@ import sys
 import os
 
 current_dir = os.path.dirname(os.path.abspath(__file__))
-parent_dir = os.path.dirname(current_dir)
-root_dir = os.path.dirname(parent_dir)
-app_dir = os.path.join(parent_dir, 'app')
+backend_dir = os.path.dirname(current_dir)
+root_dir = os.path.dirname(backend_dir)
 
-for d in [current_dir, parent_dir, root_dir, app_dir]:
-    if os.path.exists(d) and d not in sys.path:
-        sys.path.insert(0, d)
+if root_dir not in sys.path:
+    sys.path.insert(0, root_dir)
+if backend_dir not in sys.path:
+    sys.path.insert(0, backend_dir)
 
-app = None
-try:
-    from app.main import app
-except Exception:
-    try:
-        from backend.app.main import app
-    except Exception:
-        from main import app
+from app.main import app as fastapi_app
 
-try:
-    from mangum import Mangum
-    handler = Mangum(app)
-except Exception:
-    handler = app
+app = fastapi_app
+handler = fastapi_app
