@@ -75,7 +75,7 @@ Smart Expense CO₂ Tracker Pro adopts cloud database synchronization and on-dev
             └──────────────────┬──────────────────┘
                                ▼
                     FastAPI Backend Server
-                 (http://127.0.0.1:8000)
+               (https://eco-pulse-eta.vercel.app)
                                │
      ┌─────────────────────────┼─────────────────────────┐
      ▼                         ▼                         ▼
